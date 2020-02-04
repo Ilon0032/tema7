@@ -32,6 +32,7 @@
     <script>
         let firkantURL = "http://mabe-kea.dk/E19/pics/frog.png";
         let cirkelURL = "http://mabe-kea.dk/E19/pics/pig.png";
+
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -39,6 +40,12 @@
 
             document.querySelector(".firkant").innerHTML = `<img src =${firkantURL} alt = >`;
             document.querySelector(".cirkel").innerHTML = `<img src = ${cirkelURL} alt = >`;
+        }
+
+        document.querySelector(firkantURL).addEventListener("click", bytPlads);
+
+        function bytPlads {
+            console.log("bytter plads");
         }
     </script>
 </body></html>
