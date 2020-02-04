@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Basics 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="content">
+        <div> <a href="https://kea.dk">KEA</a>
+        </div>
+        <div><a href="https://github.com">Github</a></div>
+        <div><a href="http://mabe-kea.dk/E19/pics/frog.png">Frø</a></div>
+    </section>
+
+
+    <script>
+        /*innerHTML ændrer HTMLen, textContent sætter ny tekst ind*/
+
+        const firstElement = document.querySelector("div:nth-child(1)");
+        const secondElement = document.querySelector("div:nth-child(2)");
+
+        firstElement.innerHTML = "<h1>Dette er første div</h1>";
+        secondElement.textContent = "<h1>Dette er første div</h1>";
+        //        console.log(firstElementlement);
+    </script>
+</body></html>
