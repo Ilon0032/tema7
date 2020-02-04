@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Basics 2</title>
+    <style>
+        .firkant {
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .cirkel {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="firkant"></div>
+    <div class="cirkel"></div>
+
+    <script>
+        //        const green = document.querySelector("div:nht-child(1)");
+        //        const red = document.querySelector("div:nht-child(2)");
+
+        let firkantURL = "http://mabe-kea.dk/E19/pics/frog.png";
+        let cirkelURL = "http://mabe-kea.dk/E19/pics/pig.png";
+        let foxURL = "http://mabe-kea.dk/E19/pics/fox.png";
+
+
+        document.querySelector(".firkant").innerHTML = `<img src =${firkantURL} alt ="frø" >`;
+        document.querySelector(".cirkel").innerHTML = `<img src = ${cirkelURL} alt ="gris" >`;
+        document.querySelector(".cirkel").innerHTML += `<img src = ${foxURL} alt ="ræv" >`;
+        //        let h1 = document.createElement("h1");
+        //        let overskrift = document.createTextNode("Min overskrift til info")
+        //        h1.appendChild(overskrift);
+        //        let img = document.createElement("img");
+        //        img.src = "http://mabe-kea.dk/E19/pics/frog.png";
+        //        info.appendChild(h1);
+        //        info.appendChild(img);
+    </script>
+</body></html>
