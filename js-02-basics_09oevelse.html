@@ -24,7 +24,11 @@
     <script>
         let playliste = ["Heldig", "Allein, Alene", "Empire", "lala", "lolo", "lili", "nuviljegikkemere"];
         playliste.forEach(sang => {
-            document.querySelector("#display").innerHTML += `${sang}<br>`;
+            let element = document.createElement("li");
+            let mySong = document.createTextNode(sang);
+
+            element.appendChild(mySong);
+            document.querySelector("#display").appendChild(element);
         })
     </script>
 </body></html>
