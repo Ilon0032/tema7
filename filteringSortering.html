@@ -68,21 +68,25 @@
         //if (person.gsx$sex.$t == "k") 
 
         function visPersoner() {
+
             const container = document.querySelector(".datacontainer");
             const personerTemplate = document.querySelector("template");
             personer.feed.entry.forEach(person => {
-                let klon = personerTemplate.cloneNode(true).content;
+                if (person.gsx$sex.$t == "k") {
+                    let klon = personerTemplate.cloneNode(true).content;
 
-                klon.querySelector("h2").textContent = person.gsx$navn.$t;
-                klon.querySelector("h3").textContent = person.gsx$efternavn.$t;
-                klon.querySelector("img").src = person.gsx$billede.$t;
-                klon.querySelector(".alder").textContent = "Alder " + person.gsx$alder.$t;
-                klon.querySelector(".by").textContent = "By " + person.gsx$by.$t
+                    klon.querySelector("h2").textContent = person.gsx$navn.$t;
+                    klon.querySelector("h3").textContent = person.gsx$efternavn.$t;
+                    klon.querySelector("img").src = person.gsx$billede.$t;
+                    klon.querySelector(".alder").textContent = "Alder " + person.gsx$alder.$t;
+                    klon.querySelector(".by").textContent = "By " + person.gsx$by.$t
 
 
-                container.appendChild(klon);
+                    container.appendChild(klon);
+                }
             })
         }
+
         console.log(visPersoner);
 
         //personer.forEach(person => {
